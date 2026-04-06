@@ -5,13 +5,13 @@
 class AfTui < Formula
   desc "AgentFactory TUI — terminal dashboard for AI agent fleets"
   homepage "https://github.com/RenseiAI/agentfactory-tui"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v0.1.0/agentfactory-tui_0.1.0_darwin_amd64.tar.gz"
-      sha256 "291d842d10511c03ab29c9e6d5217a19f484986bba865c472a2da4d4fb66715f"
+      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v0.1.1/agentfactory-tui_0.1.1_darwin_amd64.tar.gz"
+      sha256 "0eaca438562e98d009ff5cc94ac81c8a5519be98b5b7a64cd18f04d03c234113"
 
       define_method(:install) do
         bin.install "af-tui"
@@ -19,8 +19,8 @@ class AfTui < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v0.1.0/agentfactory-tui_0.1.0_darwin_arm64.tar.gz"
-      sha256 "d8eb9ddee03841b5ac0fa80a08a413595e0eee189ffbdddcf89ec41725c9f984"
+      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v0.1.1/agentfactory-tui_0.1.1_darwin_arm64.tar.gz"
+      sha256 "5714b5a662a0494c7346bb6c3f5fcb70dff3150a8fedf020d9b5a16c488578fe"
 
       define_method(:install) do
         bin.install "af-tui"
@@ -31,16 +31,16 @@ class AfTui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v0.1.0/agentfactory-tui_0.1.0_linux_amd64.tar.gz"
-      sha256 "91d696c24190a324785455a6ee2abdfde6edaa0c19819ccab690af8d02c89deb"
+      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v0.1.1/agentfactory-tui_0.1.1_linux_amd64.tar.gz"
+      sha256 "603bc5c47e6c5f83e1f6458d420a1e4b7c4ffb8fdc72aa19f2cfd82f3c76da8e"
       define_method(:install) do
         bin.install "af-tui"
         bin.install "af-status"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v0.1.0/agentfactory-tui_0.1.0_linux_arm64.tar.gz"
-      sha256 "57d2d8dde64409cbe9a0c2637c15510bda8fa9b8125d3bd3846fa4342ba90215"
+      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v0.1.1/agentfactory-tui_0.1.1_linux_arm64.tar.gz"
+      sha256 "f497ad472db790509dc00b836fcbf9ab382fff6d90a2af2735d862f7f679aafd"
       define_method(:install) do
         bin.install "af-tui"
         bin.install "af-status"
