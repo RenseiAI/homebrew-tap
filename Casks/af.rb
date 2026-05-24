@@ -28,11 +28,21 @@ cask "af" do
   desc "AgentFactory CLI — terminal dashboard and CLI for AI agent fleets"
   homepage "https://github.com/RenseiAI/agentfactory-tui"
 
+  deprecate! date: "2026-05-24", because: "renamed to donmai. Run: brew install donmai"
+
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "af"
+
+  caveats do
+    <<~EOS
+      af has been renamed to donmai.
+      Migrate with: brew uninstall af && brew install donmai
+      See: https://donmai.dev/docs/migration
+    EOS
+  end
 
   # No zap stanza required
 
