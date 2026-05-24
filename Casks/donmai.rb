@@ -4,45 +4,36 @@ cask "donmai" do
 
   on_macos do
     on_intel do
-      # sha256 placeholders; overwritten by goreleaser on release
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-      url "https://github.com/RenseiAI/donmai/releases/download/v#{version}/donmai_#{version}_darwin_amd64.tar.gz"
+      sha256 "a91a5e3c6c3be07497e111461a3726cb8230a3f6a8f9894ddae5c189380071af"
+      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v#{version}/donmai_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      # sha256 placeholders; overwritten by goreleaser on release
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-      url "https://github.com/RenseiAI/donmai/releases/download/v#{version}/donmai_#{version}_darwin_arm64.tar.gz"
+      sha256 "37a14ce93c5f04c88a4af764066529f5b8e880b67c501e94e89adea29ba064ab"
+      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v#{version}/donmai_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      # sha256 placeholders; overwritten by goreleaser on release
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-      url "https://github.com/RenseiAI/donmai/releases/download/v#{version}/donmai_#{version}_linux_amd64.tar.gz"
+      sha256 "c68f6c77c5d6ce8554e44cef0cd21594eab55d3643f8fec4def9f784688b0a88"
+      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v#{version}/donmai_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      # sha256 placeholders; overwritten by goreleaser on release
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-      url "https://github.com/RenseiAI/donmai/releases/download/v#{version}/donmai_#{version}_linux_arm64.tar.gz"
+      sha256 "a13c60827c3d28f112c9afbf31351fab2eb0a92cc0399539bdabef6bf65cce6b"
+      url "https://github.com/RenseiAI/agentfactory-tui/releases/download/v#{version}/donmai_#{version}_linux_arm64.tar.gz"
     end
   end
 
   name "donmai"
-  desc "Donmai — terminal dashboard and CLI for AI agent fleets"
-  homepage "https://donmai.dev"
+  desc "Donmai CLI — terminal dashboard and CLI for AI agent fleets"
+  homepage "https://github.com/RenseiAI/donmai"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(/^v?(\d+(?:\.\d+)*?)$/i)
+    skip "Auto-generated on release."
   end
 
   binary "donmai"
 
-  zap trash: [
-    "~/.donmai",
-    "~/Library/Logs/donmai",
-  ]
+  # No zap stanza required
 
 end
