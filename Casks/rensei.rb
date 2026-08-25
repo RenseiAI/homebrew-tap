@@ -4,12 +4,12 @@ cask "rensei" do
 
   on_macos do
     on_intel do
-      sha256 "da25fd416ab949d172c74e0b174b8259a5a3e07a57d3be4192b57b55a63a99c8"
+      sha256 "cff8ce28fa4c592a58ad061cf4e3732fe70ae6dc65b42f4598b2129e1b426f07"
       url "https://github.com/RenseiAI/releases/releases/download/v#{version}/rensei_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/RenseiAI/releases/"
     end
     on_arm do
-      sha256 "817295773fb81e626421029af471df197c77b3b64d3840e4cec81e8e0d4f832a"
+      sha256 "bf29ccf92adcde4e0a4f37ae29c56a45d808ead1fac94de2d29596f75ec8806c"
       url "https://github.com/RenseiAI/releases/releases/download/v#{version}/rensei_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/RenseiAI/releases/"
     end
@@ -17,12 +17,12 @@ cask "rensei" do
 
   on_linux do
     on_intel do
-      sha256 "8ea0f237e804806ed51e008f39ab4b8f0a70ec5fc0b4887809a5e3c1df0b4e12"
+      sha256 "a782f9e83092aa488c68a943eb361905bde37f538a4c3eeca812492b1aca6b2d"
       url "https://github.com/RenseiAI/releases/releases/download/v#{version}/rensei_#{version}_linux_amd64.tar.gz",
         verified: "github.com/RenseiAI/releases/"
     end
     on_arm do
-      sha256 "07c7692d9e86cc0c39bdf1b5d05fb893acae65d3d06ca6edd5df8904e210bfb4"
+      sha256 "8bacb2456fe0ab99f055deaed5dd9aa0bf660ac1568a9f03b936ca8bad7daa75"
       url "https://github.com/RenseiAI/releases/releases/download/v#{version}/rensei_#{version}_linux_arm64.tar.gz",
         verified: "github.com/RenseiAI/releases/"
     end
